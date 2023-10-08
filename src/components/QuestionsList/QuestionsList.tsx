@@ -25,7 +25,7 @@ export const QuestionsList = () => {
     return <>
         <Container className="col-5">
             <div>
-                <h1>Hello</h1>
+                <h1>Lista pytań</h1>
             </div>
 
             <ul>

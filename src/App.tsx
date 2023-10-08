@@ -17,7 +17,6 @@ export function App() {
     return (
         <QuestionContext.Provider value={{questionId, setQuestionId}}>
             <NavBar/>
-            <Button variant="info">Testowy</Button>
             <Routes>
                 <Route path="/list" element={<QuestionsList/>}/>
                 <Route path="/question" element={<AddQuestionForm/>}/>
