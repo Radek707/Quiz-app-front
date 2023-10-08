@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "types": [
-        "../megak-adv-back/types"
+        "../../quiz-back/quiz/src/types"
       ]
     }
   }
