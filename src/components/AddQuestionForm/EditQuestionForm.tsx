@@ -2,6 +2,7 @@ import React, {SyntheticEvent, useContext, useEffect, useState} from "react";
 import {Button, Container} from "react-bootstrap";
 import {QuestionItem} from "types";
 import {QuestionContext} from "../../contexts/question.context";
+import {apiUrl} from "src/config/config";
 
 export const EditQuestionForm = () => {
     const {questionId} = useContext(QuestionContext);
@@ -24,7 +25,7 @@ export const EditQuestionForm = () => {
 
     useEffect(() => {
         (async () => {
-            const res = await fetch(`http://localhost:3000/question/${questionId}`)
+            const res = await fetch(`${apiUrl}/question/${questionId}`)
 
             const data = await res.json();
             console.log("in get Question data: ", data);

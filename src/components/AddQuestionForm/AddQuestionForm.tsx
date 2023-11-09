@@ -1,5 +1,6 @@
 import React, { SyntheticEvent, useState } from 'react';
 import { Button, Container } from 'react-bootstrap';
+import {apiUrl} from 'src/config/config';
 
 export const AddQuestionForm = () => {
 	const [loading, setLoading] = useState(false);
@@ -28,7 +29,7 @@ export const AddQuestionForm = () => {
 		setLoading(true);
 
 		try {
-			const res = await fetch('https://quiz.radek.smallhost.pl/question', {
+			const res = await fetch(`${apiUrl}/question`, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',

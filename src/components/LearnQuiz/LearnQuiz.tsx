@@ -3,6 +3,7 @@ import {Button, Card, Container, ListGroup, ProgressBar} from "react-bootstrap";
 import {Answer} from "./Answer";
 import {ShowResults} from "./ShowResults";
 import './ShowResults.css';
+import { apiUrl } from "src/config/config";
 
 export const LearnQuiz = () => {
     const [question, setQuestion] = useState<any | null>(null);
@@ -11,7 +12,7 @@ export const LearnQuiz = () => {
 
     useEffect(() => {
         (async () => {
-            const res = await fetch(`http://localhost:3000/learning/random`);
+            const res = await fetch(`${apiUrl}/learning/random`);
             const data = await res.json();
             setQuestion(data);
         })();

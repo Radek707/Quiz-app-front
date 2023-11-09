@@ -2,14 +2,15 @@ import React, {useEffect, useState} from "react";
 import {GetQuestionsListResponse} from 'types';
 import {QuestionsListItem} from "./QuestionsListItem";
 import {Container} from "react-bootstrap";
-import './QuestionListItem.css'
+import './QuestionListItem.css';
+import {apiUrl} from 'src/config/config';
 
 export const QuestionsList = () => {
     const [questionList, setQuestionList] = useState<GetQuestionsListResponse | null>(null);
 
     useEffect(() => {
         (async () => {
-            const res = await fetch(`https://quiz.radek.smallhost.pl/question`);
+            const res = await fetch(`${apiUrl}/question`);
             const data = await res.json();
             setQuestionList(data);
         })();

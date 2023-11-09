@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {ListGroup} from "react-bootstrap";
+import {apiUrl} from 'src/config/config';
 
 interface Props {
     answer: string;
@@ -11,7 +12,7 @@ export const Answer = (props: Props) => {
     const [color, setColor] = useState("secondary");
     const check = (answer: any) => {
         (async () => {
-            const res = await fetch(`http://localhost:3000/learning`, {
+            const res = await fetch(`${apiUrl}/learning`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

@@ -1,6 +1,7 @@
 import React, {SyntheticEvent, useContext, useEffect, useState} from "react";
 import {Container} from "react-bootstrap";
 import {QuestionContext} from "../../contexts/question.context";
+import {apiUrl} from "src/config/config";
 
 export const DeleteQuestionForm = () => {
     const {questionId} = useContext(QuestionContext);
@@ -21,7 +22,7 @@ export const DeleteQuestionForm = () => {
         setLoading(true);
 
         try {
-            const res = await fetch(`http://localhost:3000/question/${questionId}`, {
+            const res = await fetch(`${apiUrl}/question/${questionId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
