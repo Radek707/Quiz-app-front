@@ -1,5 +1,5 @@
 import React, {SyntheticEvent, useContext, useEffect, useState} from "react";
-import {Container} from "react-bootstrap";
+import {Button, Container} from "react-bootstrap";
 import {QuestionItem} from "types";
 import {QuestionContext} from "../../contexts/question.context";
 
@@ -138,7 +138,7 @@ export const EditQuestionForm = () => {
                         />
                     </label>
                 </p>
-                <button type="submit">Zapisz</button>
+                <Button variant="outline-secondary" type="submit">Zapisz</Button>
             </form>
         </Container>
     )

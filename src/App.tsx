@@ -5,11 +5,11 @@ import {QuestionsList} from "./components/QuestionsList/QuestionsList";
 import {AddQuestionForm} from "./components/AddQuestionForm/AddQuestionForm";
 import {Route, Routes} from "react-router-dom";
 import {NavBar} from "./layouts/Navbar/NavBar";
-import {Button, Container} from "react-bootstrap";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {EditQuestionForm} from "./components/AddQuestionForm/EditQuestionForm";
 import {QuestionContext} from "./contexts/question.context";
 import {DeleteQuestionForm} from "./components/AddQuestionForm/DeleteQuestionForm";
+import {LearnQuiz} from "./components/LearnQuiz/LearnQuiz";
 
 export function App() {
     const [questionId, setQuestionId] = useState('');
@@ -22,6 +22,7 @@ export function App() {
                 <Route path="/question" element={<AddQuestionForm/>}/>
                 <Route path="/edit" element={<EditQuestionForm/>}/>
                 <Route path="/delete" element={<DeleteQuestionForm/>}/>
+                <Route path="/learn" element={<LearnQuiz/>}/>
             </Routes>
         </QuestionContext.Provider>
     );

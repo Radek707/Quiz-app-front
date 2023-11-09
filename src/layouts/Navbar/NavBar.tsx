@@ -13,7 +13,8 @@ export const NavBar = () => {
                 <Navbar.Collapse id="basic-navbar-nav" className="ml-auto justify-content-end">
                     <Nav>
                         <Nav.Link href="/list">Lista pytań</Nav.Link>
-                        <Nav.Link href="/question">Link</Nav.Link>
+                        <Nav.Link href="/question">Dodaj pytanie</Nav.Link>
+                        <Nav.Link href="/learn">Learn</Nav.Link>
                         <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                             <NavDropdown.Item href="#action/3.1" >Action</NavDropdown.Item>
                             <NavDropdown.Item href="#action/3.2">

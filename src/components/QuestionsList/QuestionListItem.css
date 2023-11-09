@@ -1,4 +1,20 @@
-li p {
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+li div {
     display: flex;
     align-items: center;
+    margin: 2px;
+}
+
+.question-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.function-btn {
+    margin-right: 5px;
+    margin-left: 5px;
 }

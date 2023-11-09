@@ -44,6 +44,6 @@ export const DeleteQuestionForm = () => {
     if (isSuccess) {
         return <h2>Usunięto pytanie z bazy danych.</h2>
     } else {
-        return <h2>Usuwanie pytanie nie powiodło się.</h2>
+        return <h2>Usuwanie nie powiodło się.</h2>
     }
 }

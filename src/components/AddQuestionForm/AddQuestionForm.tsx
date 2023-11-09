@@ -1,5 +1,5 @@
 import React, {SyntheticEvent, useState} from "react";
-import {Container} from "react-bootstrap";
+import {Button, Container} from "react-bootstrap";
 
 export const AddQuestionForm = () => {
     const [loading, setLoading] = useState(false);
@@ -51,66 +51,68 @@ export const AddQuestionForm = () => {
     return <Container className="col-6">
         <form action="" onSubmit={saveQuestion}>
             <h1>Dodaj pytanie.</h1>
-            <p>
-                <label>Pytanie: <br/>
+            <div>
+                <p>
+                    <label>Pytanie: <br/>
+                        <input
+                            type="text"
+                            name="questionText"
+                            required
+                            maxLength={99}
+                            value={form.questionText}
+                            onChange={e => updateForm('questionText', e.target.value)}
+                        />
+                    </label>
+                </p><p>
+                <label>Odpowiedź: <br/>
                     <input
                         type="text"
-                        name="questionText"
+                        name="correctAnswer"
                         required
                         maxLength={99}
-                        value={form.questionText}
-                        onChange={e => updateForm('questionText', e.target.value)}
-                    />
-                </label>
-            </p><p>
-            <label>Odpowiedź: <br/>
-                <input
-                    type="text"
-                    name="correctAnswer"
-                    required
-                    maxLength={99}
-                    value={form.correctAnswer}
-                    onChange={e => updateForm('correctAnswer', e.target.value)}
-                />
-            </label>
-        </p>
-            <p>
-                <label>Zła odpowiedź 1: <br/>
-                    <input
-                        type="text"
-                        name="wrongAnswer1"
-                        required
-                        maxLength={99}
-                        value={form.wrongAnswer1}
-                        onChange={e => updateForm('wrongAnswer1', e.target.value)}
+                        value={form.correctAnswer}
+                        onChange={e => updateForm('correctAnswer', e.target.value)}
                     />
                 </label>
             </p>
-            <p>
-                <label>Zła odpowiedź 2: <br/>
-                    <input
-                        type="text"
-                        name="wrongAnswer2"
-                        required
-                        maxLength={99}
-                        value={form.wrongAnswer2}
-                        onChange={e => updateForm('wrongAnswer2', e.target.value)}
-                    />
-                </label>
-            </p>
-            <p>
-                <label>Zła odpowiedź 3: <br/>
-                    <input
-                        type="text"
-                        name="wrongAnswer3"
-                        required
-                        maxLength={99}
-                        value={form.wrongAnswer3}
-                        onChange={e => updateForm('wrongAnswer3', e.target.value)}
-                    />
-                </label>
-            </p>
-            <button type="submit">Zapisz</button>
+                <p>
+                    <label>Zła odpowiedź 1: <br/>
+                        <input
+                            type="text"
+                            name="wrongAnswer1"
+                            required
+                            maxLength={99}
+                            value={form.wrongAnswer1}
+                            onChange={e => updateForm('wrongAnswer1', e.target.value)}
+                        />
+                    </label>
+                </p>
+                <p>
+                    <label>Zła odpowiedź 2: <br/>
+                        <input
+                            type="text"
+                            name="wrongAnswer2"
+                            required
+                            maxLength={99}
+                            value={form.wrongAnswer2}
+                            onChange={e => updateForm('wrongAnswer2', e.target.value)}
+                        />
+                    </label>
+                </p>
+                <p>
+                    <label>Zła odpowiedź 3: <br/>
+                        <input
+                            type="text"
+                            name="wrongAnswer3"
+                            required
+                            maxLength={99}
+                            value={form.wrongAnswer3}
+                            onChange={e => updateForm('wrongAnswer3', e.target.value)}
+                        />
+                    </label>
+                </p>
+            </div>
+            <Button variant="outline-secondary" type="submit">Zapisz</Button>
         </form>
     </Container>
 }

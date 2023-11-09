@@ -1,0 +1,18 @@
+button {
+    margin-top: 10px;
+}
+
+.result-li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-item {
+    width: 100px;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.card-text {
+    font-size: 24px;
+}

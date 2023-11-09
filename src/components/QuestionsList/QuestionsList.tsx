@@ -2,19 +2,16 @@ import React, {useEffect, useState} from "react";
 import {GetQuestionsListResponse} from 'types';
 import {QuestionsListItem} from "./QuestionsListItem";
 import {Container} from "react-bootstrap";
+import './QuestionListItem.css'
 
 export const QuestionsList = () => {
     const [questionList, setQuestionList] = useState<GetQuestionsListResponse | null>(null);
 
     useEffect(() => {
         (async () => {
-            const res = await fetch(`http://localhost:3000/question`);
+            const res = await fetch(`https://quiz.radek.smallhost.pl/question`);
             const data = await res.json();
-
             setQuestionList(data);
-
-            console.log("testing fetch");
-            console.log("this is data from fetch: ", data);
         })();
     }, []);
 
