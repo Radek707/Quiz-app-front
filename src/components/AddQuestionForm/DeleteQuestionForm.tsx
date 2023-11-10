@@ -1,7 +1,7 @@
 import React, {SyntheticEvent, useContext, useEffect, useState} from "react";
 import {Container} from "react-bootstrap";
 import {QuestionContext} from "../../contexts/question.context";
-import {apiUrl} from "src/config/config";
+import {apiUrl} from "../../config/config";
 
 export const DeleteQuestionForm = () => {
     const {questionId} = useContext(QuestionContext);

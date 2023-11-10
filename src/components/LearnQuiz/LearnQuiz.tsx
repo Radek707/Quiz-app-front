@@ -3,7 +3,7 @@ import {Button, Card, Container, ListGroup, ProgressBar} from "react-bootstrap";
 import {Answer} from "./Answer";
 import {ShowResults} from "./ShowResults";
 import './ShowResults.css';
-import { apiUrl } from "src/config/config";
+import { apiUrl } from "../../config/config";
 
 export const LearnQuiz = () => {
     const [question, setQuestion] = useState<any | null>(null);

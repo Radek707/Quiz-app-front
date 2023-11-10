@@ -1,6 +1,6 @@
 import React, { SyntheticEvent, useState } from 'react';
 import { Button, Container } from 'react-bootstrap';
-import {apiUrl} from 'src/config/config';
+import {apiUrl} from "../../config/config";
 
 export const AddQuestionForm = () => {
 	const [loading, setLoading] = useState(false);

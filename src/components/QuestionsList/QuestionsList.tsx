@@ -3,7 +3,7 @@ import {GetQuestionsListResponse} from 'types';
 import {QuestionsListItem} from "./QuestionsListItem";
 import {Container} from "react-bootstrap";
 import './QuestionListItem.css';
-import {apiUrl} from 'src/config/config';
+import {apiUrl} from '../../config/config';
 
 export const QuestionsList = () => {
     const [questionList, setQuestionList] = useState<GetQuestionsListResponse | null>(null);

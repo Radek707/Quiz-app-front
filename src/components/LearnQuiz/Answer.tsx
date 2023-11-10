@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {ListGroup} from "react-bootstrap";
-import {apiUrl} from 'src/config/config';
+import {apiUrl} from '../../config/config';
 
 interface Props {
     answer: string;

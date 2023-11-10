@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, ListGroup } from 'react-bootstrap';
 import { ResultsItem } from './ResultsItem';
 import { LearnQuiz } from './LearnQuiz';
-import { apiUrl } from 'src/config/config';
+import { apiUrl } from '../../config/config';
 
 export const ShowResults = (props: any) => {
 	const [questionsToLearn, setQuestionsToLearn] = useState<any | null>(null);
